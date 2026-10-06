@@ -28,7 +28,7 @@ public class CarroService {
         repository.deleteByPlaca(placa);
     }
 
-    public void atualizarCarroPorPlaca(String placa, Integer id, Carro carro){
+    public void atualizarCarroPorId(Integer id, Carro carro){
         Carro carroEntity = repository.findById(id).orElseThrow(() ->
                 new RuntimeException("Carro não encontrado!"));
         Carro carroAtualizado = Carro.builder()
